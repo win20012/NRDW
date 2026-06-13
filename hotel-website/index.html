@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NR&DW | Lanna Contemporary Boutique Hotel in Chiang Mai</title>
+    <meta name="description"
+        content="Experience the charm of Chiang Mai Old Town at NR&DW. A 7-bedroom Lanna contemporary boutique hotel offering modern luxury, serene rooms, and unmatched hospitality.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teak: {
+                            DEFAULT: '#6B4E31',
+                            light: '#8B6B4A',
+                        },
+                        gold: '#D4AF37',
+                        sand: '#F5F1E7',
+                        ink: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-sand/90 backdrop-blur-md border-b border-teak/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-3xl font-bold tracking-wider text-teak">
+                        NR&DW
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about"
+                        class="text-ink hover:text-teak transition-colors text-sm uppercase tracking-widest font-medium">About</a>
+                    <a href="#rooms"
+                        class="text-ink hover:text-teak transition-colors text-sm uppercase tracking-widest font-medium">Rooms</a>
+                    <a href="#location"
+                        class="text-ink hover:text-teak transition-colors text-sm uppercase tracking-widest font-medium">Location</a>
+                    <a href="#booking"
+                        class="btn-primary px-6 py-2 rounded-none text-sm uppercase tracking-widest font-semibold">Book
+                        Now</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-teak focus:outline-none p-2" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <div class="w-6 h-5 relative flex flex-col justify-between">
+                            <span class="w-full h-0.5 bg-current transform transition duration-300 ease-in-out"></span>
+                            <span class="w-full h-0.5 bg-current transition duration-300 ease-in-out"></span>
+                            <span class="w-full h-0.5 bg-current transform transition duration-300 ease-in-out"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu list -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sand border-b border-teak/10 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about"
+                    class="block px-3 py-4 text-base font-medium text-ink hover:text-teak hover:bg-white/50 border-b border-teak/5">About</a>
+                <a href="#rooms"
+                    class="block px-3 py-4 text-base font-medium text-ink hover:text-teak hover:bg-white/50 border-b border-teak/5">Rooms</a>
+                <a href="#location"
+                    class="block px-3 py-4 text-base font-medium text-ink hover:text-teak hover:bg-white/50 border-b border-teak/5">Location</a>
+                <a href="#booking" class="block px-3 py-4 text-base font-bold text-teak hover:bg-white/50">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/hotel_hero_lanna.png" alt="NR&DW Hotel Exterior"
+                class="w-full h-full object-cover object-center scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto scroll-animate">
+            <p class="text-gold text-sm md:text-base font-semibold uppercase tracking-[0.3em] mb-4 animate-fade-in delay-100">
+                Chiang Mai Old Town</p>
+            <h1
+                class="text-5xl md:text-7xl lg:text-8xl text-sand font-serif mb-6 leading-tight animate-fade-in delay-200">
+                Lanna <br /> Contemporary.
+            </h1>
+            <p class="text-sand text-lg md:text-xl font-normal mb-10 max-w-2xl mx-auto animate-fade-in delay-300">
+                A serene 7-bedroom boutique sanctuary blending rich Thai heritage with modern luxury, steps away from
+                historic temples.
+            </p>
+            <div class="animate-fade-in delay-300">
+                <a href="#booking"
+                    class="btn-primary inline-block px-10 py-4 text-sm uppercase tracking-widest font-semibold border border-transparent">
+                    Reserve Your Stay
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <a href="#about" class="text-sand hover:text-white transition-colors" aria-label="Scroll down">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-sand text-ink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="scroll-animate relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-gold/50 z-0"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold/50 z-0"></div>
+                    <img src="images/hotel_hero_lanna.png" alt="Hotel Interior Detail"
+                        class="w-full h-[500px] object-cover rounded-sm shadow-xl relative z-10" />
+                </div>
+                <div class="scroll-animate">
+                    <h2 class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Our Story</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif text-teak mb-6">A Hidden Gem in the Old City</h3>
+                    <p class="text-lg text-ink/95 font-normal mb-6 leading-relaxed">
+                        Welcome to NR&DW, an exclusive 7-bedroom boutique hotel perfectly situated within the ancient
+                        moat of Chiang Mai Old Town. We've crafted a space where traditional Lanna architecture meets
+                        contemporary comfort.
+                    </p>
+                    <p class="text-lg text-ink/95 font-normal mb-8 leading-relaxed">
+                        Step outside our doors and you are immediately immersed in the vibrant life of the city—a short
+                        walk will take you to legendary temples like Wat Chedi Luang, the famous Sunday Walking Street
+                        Market, and the absolute best of local cafes and dining.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-teak/20">
+                        <div>
+                            <p class="text-3xl font-serif text-teak mb-1">7</p>
+                            <p class="text-sm uppercase tracking-wider text-ink/80 font-medium">Bespoke Bedrooms</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-serif text-teak mb-1">5 <span class="text-lg">min</span></p>
+                            <p class="text-sm uppercase tracking-wider text-ink/80 font-medium">Walk to Temples</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-24 bg-white text-ink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+                <h2 class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Accommodations</h2>
+                <h3 class="text-4xl md:text-5xl font-serif text-teak mb-6">Our Sanctuary</h3>
+                <p class="text-lg text-ink/95 font-normal">
+                    Every one of our 7 identically premium bedrooms is designed to be your private retreat after a day
+                    of exploring. Experience pure comfort with our signature amenities.
+                </p>
+            </div>
+
+            <!-- Amenities Ribbon -->
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-16 scroll-animate">
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-snowflake text-2xl text-teak mb-3"></i>
+                    <span class="text-xs uppercase tracking-widest text-ink/90 font-medium">Quiet A/C</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-wifi text-2xl text-teak mb-3"></i>
+                    <span class="text-xs uppercase tracking-widest text-ink/90 font-medium">Fast Wi-Fi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-bath text-2xl text-teak mb-3"></i>
+                    <span class="text-xs uppercase tracking-widest text-ink/90 font-medium">En-suite Bath</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-bed text-2xl text-teak mb-3"></i>
+                    <span class="text-xs uppercase tracking-widest text-ink/90 font-medium">Premium Bedding</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fas fa-mug-hot text-2xl text-teak mb-3"></i>
+                    <span class="text-xs uppercase tracking-widest text-ink/90 font-medium">Minibar & Coffee</span>
+                </div>
+            </div>
+
+            <!-- Room Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Room Card 1 -->
+                <div class="bg-sand rounded-sm overflow-hidden card-hover scroll-animate group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/room_suite_lanna.png" alt="Deluxe Lanna Suite"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teak shadow-sm">
+                            From 2,500 THB
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-serif text-teak mb-2">Deluxe Lanna Suite</h4>
+                        <p class="text-sm text-ink/85 mb-6 font-normal h-16">
+                            Spacious layout featuring premium teak furnishings, a plush king-size bed, and touches of
+                            traditional Thai silk.
+                        </p>
+                        <a href="#booking"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-widest text-teak hover:text-gold transition-colors">
+                            Book Room <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="bg-sand rounded-sm overflow-hidden card-hover scroll-animate delay-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/room_superior_teak.png" alt="Superior Teak Room"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teak shadow-sm">
+                            From 1,800 THB
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-serif text-teak mb-2">Superior Teak Room</h4>
+                        <p class="text-sm text-ink/85 mb-6 font-normal h-16">
+                            Elegant and cozy, offering lovely ambient lighting, modern amenities, and beautifully
+                            understated Lanna decor.
+                        </p>
+                        <a href="#booking"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-widest text-teak hover:text-gold transition-colors">
+                            Book Room <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="bg-sand rounded-sm overflow-hidden card-hover scroll-animate delay-200 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/room_cozy_courtyard.png" alt="Cozy Courtyard Room"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teak shadow-sm">
+                            From 1,500 THB
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-serif text-teak mb-2">Cozy Courtyard Room</h4>
+                        <p class="text-sm text-ink/85 mb-6 font-normal h-16">
+                            A peaceful retreat on the ground floor, letting natural light pour in from the lush tropical
+                            courtyard just outside.
+                        </p>
+                        <a href="#booking"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-widest text-teak hover:text-gold transition-colors">
+                            Book Room <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 scroll-animate">
+                <p class="text-sm text-ink/80 font-normal italic">* Our property features a total of 7 exquisitely appointed rooms.
+                    Book the entire property for family gatherings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (Booking) -->
+    <section id="booking" class="py-20 bg-teak text-sand relative overflow-hidden">
+        <div class="absolute -right-20 -top-40 w-96 h-96 rounded-full border border-sand/10 blur-xl"></div>
+        <div class="absolute -left-20 -bottom-40 w-96 h-96 rounded-full border border-sand/10 blur-xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 scroll-animate">
+            <h2 class="text-4xl md:text-5xl font-serif mb-6">Ready to Experience Chiang Mai?</h2>
+            <p class="text-lg font-normal text-white mb-10 max-w-2xl mx-auto">
+                Secure your stay directly with us for the best rates. Check availability via our booking partners or
+                message us instantly on WhatsApp.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#booking"
+                    class="w-full sm:w-auto px-8 py-4 bg-white text-teak text-sm uppercase tracking-widest font-bold hover:bg-sand transition-colors">
+                    <i class="far fa-calendar-alt mr-2"></i> View Availability
+                </a>
+                <a href="https://wa.me/66000000000" target="_blank"
+                    class="w-full sm:w-auto px-8 py-4 border border-sand/80 text-sand text-sm uppercase tracking-widest font-bold hover:bg-sand hover:text-teak transition-colors">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & FAQ -->
+    <section id="location" class="py-24 bg-sand text-ink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <!-- Map / Location -->
+                <div class="scroll-animate">
+                    <h2 class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Find Us</h2>
+                    <h3 class="text-4xl font-serif text-teak mb-6">Heart of the Old City</h3>
+                    <p class="text-ink/95 font-normal mb-8">
+                        Our address places you in the historical epicenter of Chiang Mai. We are tucked away in a quiet
+                        lane, ensuring peaceful nights, yet moments away from bustling cafes and historic sites.
+                    </p>
+
+                    <div class="h-80 w-full bg-gray-200 rounded-sm overflow-hidden shadow-inner mb-8">
+                        <!-- Embedded Google Map targeting Chiang Mai Old Town -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d944.27919527719!2d98.97941726963315!3d18.7929482685063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQ3JzM0LjYiTiA5OMKwNTgnNDguMiJF!5e0!3m2!1sen!2sth!4v1772365999335!5m2!1sen!2sth"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="scroll-animate">
+                    <h2 class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Need to Know</h2>
+                    <h3 class="text-4xl font-serif text-teak mb-8">Frequently Asked Questions</h3>
+
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="border-b border-teak/10 pb-4">
+                            <button
+                                class="faq-button w-full flex justify-between items-center text-left focus:outline-none py-2">
+                                <span class="font-serif text-lg text-teak">Is breakfast included?</span>
+                                <i class="fas fa-plus text-sm text-gold faq-icon"></i>
+                            </button>
+                            <div class="faq-answer text-ink/90 font-normal text-sm mt-3 pr-8">
+                                We focus on providing premium sleep setups. While breakfast isn't served on-site, there
+                                are dozens of incredible local cafes, bakeries, and traditional street food stalls
+                                within a 2-minute walk of our door.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="border-b border-teak/10 pb-4">
+                            <button
+                                class="faq-button w-full flex justify-between items-center text-left focus:outline-none py-2">
+                                <span class="font-serif text-lg text-teak">Do you have parking?</span>
+                                <i class="fas fa-plus text-sm text-gold faq-icon"></i>
+                            </button>
+                            <div class="faq-answer text-ink/90 font-normal text-sm mt-3 pr-8">
+                                Being in the historical Old Town, space is limited. We offer scooter parking on-site.
+                                For cars, there is limited street parking nearby. Let us know if you drive so we can
+                                assist!
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="border-b border-teak/10 pb-4">
+                            <button
+                                class="faq-button w-full flex justify-between items-center text-left focus:outline-none py-2">
+                                <span class="font-serif text-lg text-teak">What are the check-in times?</span>
+                                <i class="fas fa-plus text-sm text-gold faq-icon"></i>
+                            </button>
+                            <div class="faq-answer text-ink/90 font-normal text-sm mt-3 pr-8">
+                                Check-in starts at 2:00 PM and check-out is at 12:00 PM (Noon). If you arrive early, you
+                                are welcome to drop your bags with us and explore the nearby temples.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-sand py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <a href="#" class="font-serif text-3xl font-bold tracking-wider text-white mb-4 block">
+                    NR&DW
+                </a>
+                <p class="text-sm font-normal text-sand max-w-xs mb-4">
+                    A timeless sanctuary in the historical center of Chiang Mai, seamlessly blending Lanna heritage with
+                    modern sensibilities.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-sand/95 hover:text-white transition-colors"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-sand/95 hover:text-white transition-colors"><i
+                            class="fab fa-facebook text-xl"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-6">Contact</h4>
+                <ul class="space-y-3 text-sm font-normal text-sand">
+                    <li><i class="fas fa-map-marker-alt w-5 text-center mr-2 text-gold"></i> 123 Old Town Moat Road,
+                        Chiang Mai 50200, Thailand</li>
+                    <li><i class="fas fa-phone w-5 text-center mr-2 text-gold"></i> +66 (0) 53 000 000</li>
+                    <li><i class="fab fa-whatsapp w-5 text-center mr-2 text-gold"></i> +66 (0) 00 000 0000</li>
+                    <li><i class="fas fa-envelope w-5 text-center mr-2 text-gold"></i> hello@nrdw-hotel.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-6">Explore</h4>
+                <ul class="space-y-3 text-sm font-normal text-sand">
+                    <li><a href="#about" class="hover:text-gold transition-colors">Our Story</a></li>
+                    <li><a href="#rooms" class="hover:text-gold transition-colors">7 Bedrooms</a></li>
+                    <li><a href="#location" class="hover:text-gold transition-colors">Location map</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-white/20 text-center text-xs font-normal text-sand/95">
+            <p>&copy; 2026 NR&DW Hotel, Chiang Mai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
