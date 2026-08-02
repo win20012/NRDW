@@ -8,7 +8,7 @@
 ## 🔴 P0 — Critical (Must-have before launch)
 
 ### Content & Copy
-- [ ] **Replace all placeholder contact details** — phone number (`+66 (0) 53 000 000`), WhatsApp (`+66 (0) 00 000 0000`), email (`hello@nrdw-hotel.com`), and street address (`123 Old Town Moat Road`) with real information
+- [/] **Replace all placeholder contact details** — address (`4/2 ถ.สิงหราช ซ.3 ต.ศรีภูมิ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200`) and email (`stay@decemberwindchiangmai.com`) updated. (Phone and WhatsApp remain placeholder)
 - [ ] **Replace placeholder room names & prices** — confirm the actual room categories, names, and starting rates (currently "Deluxe Lanna Suite 2,500 THB", "Superior Teak Room 1,800 THB", "Cozy Courtyard Room 1,500 THB")
 - [ ] **Replace placeholder social links** — Instagram and Facebook `href="#"` need real URLs
 - [ ] **Add Thai language version** — AGENTS.md requires all guest-facing content in both English and Thai. Currently English-only. Implement a language switcher (EN / TH)
